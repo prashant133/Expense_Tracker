@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
-const DBNAME = "expenxe_tracker"
+const DBNAME = "expense_tracker";
 
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(
-      `${process.env.MONGO_URI}/${DBNAME}`
+      `${process.env.MONGO_URI}`
     );
 
     console.log(`MongoDB connected ${connectionInstance.connection.host}`);
